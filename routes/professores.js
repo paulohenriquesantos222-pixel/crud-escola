@@ -20,7 +20,7 @@ let professores = [
   }
 ]
 
-router.post('/professores', (req, res) => {
+router.post('/', (req, res) => {
   const { nome, cpf, email, telefone, materia } = req.body
 
   if (!nome || !cpf || !email || !telefone || !materia) {
@@ -47,11 +47,11 @@ router.post('/professores', (req, res) => {
   res.status(201).json({ message: "Professor cadastrado com sucesso!", novoProfessor })
 })
 
-router.get('/professores', (req, res) => {
+router.get('/', (req, res) => {
   res.json(professores)
 })
 
-router.get('/professores/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   const idRecebido = req.params.id
   const professor = professores.find(p => p.id == idRecebido)
 
@@ -62,7 +62,7 @@ router.get('/professores/:id', (req, res) => {
   res.json(professor)
 })
 
-router.put('/professores/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   const idRecebido = req.params.id
   const { nome, email, telefone, materia } = req.body
 
@@ -82,10 +82,10 @@ router.put('/professores/:id', (req, res) => {
   professor.telefone = telefone
   professor.materia = materia
 
-  res.json({ message: "Professor atualizado com sucesso!" })
+  res.json({ message: "Professor atualizado com sucesso!", professor })
 })
 
-router.delete('/professores/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
   const idRecebido = req.params.id
   const professor = professores.find(p => p.id == idRecebido)
 

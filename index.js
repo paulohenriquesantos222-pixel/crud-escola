@@ -5,6 +5,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
+const professoresRouter = require('./routes/professores')
+
+app.use('/professores', professoresRouter)
 
 
 const alunosRouter = require('./routes/alunos')

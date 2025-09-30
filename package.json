@@ -9,12 +9,20 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulohenriquesantos222-pixel/crud-escola.git"
+  },
+  "bugs": {
+    "url": "https://github.com/paulohenriquesantos222-pixel/crud-escola/issues"
+  },
+  "homepage": "https://github.com/paulohenriquesantos222-pixel/crud-escola#readme",
+  "description": ""
 }
